@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CareerX
 
 AI-powered career development platform — resume building, interview prep, coding practice, exam preparation, and job discovery in one dashboard.
@@ -82,3 +83,7 @@ See [`server/.env.example`](server/.env.example) and [`client/.env.local.example
 ## License
 
 MIT
+=======
+# CareerX-AI-Powered-Career-Platform
+CareerX is an AI-powered career platform that helps job seekers and higher education aspirants make informed career decisions through personalized recommendations, career guidance, and an intuitive user experience.
+>>>>>>> 5a9d445dcab458f549b4486a0869d5c3197bf357
