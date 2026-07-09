@@ -1,0 +1,47 @@
+# ================================
+# Render Blueprint — CareerX Backend
+# ================================
+# Deploy: connect your GitHub repo on https://render.com
+# Render auto-detects this file and creates the service.
+
+services:
+  - type: web
+    name: careerx-api
+    runtime: node
+    region: oregon
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node src/server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false  # set manually in Render dashboard
+      - key: JWT_SECRET
+        sync: false  # set manually — must match across deploys
+      - key: JWT_REFRESH_SECRET
+        sync: false  # set manually — must match across deploys
+      - key: JWT_EXPIRES_IN
+        value: "15m"
+      - key: JWT_REFRESH_EXPIRES_IN
+        value: "7d"
+      - key: CLIENT_URL
+        sync: false  # e.g. https://career-development-eight.vercel.app
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GITHUB_CLIENT_ID
+        sync: false
+      - key: GITHUB_CLIENT_SECRET
+        sync: false
+      - key: JDOODLE_CLIENT_ID
+        sync: false
+      - key: JDOODLE_CLIENT_SECRET
+        sync: false
